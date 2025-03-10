@@ -1,0 +1,56 @@
+@import url('https://api.fontshare.com/v2/css?f[]=excon@400&f[]=plein@400&display=swap');
+body {
+    cursor: crosshair;
+}
+h1 {
+    font-size: 3.5rem;
+    font-family: 'Plein', sans-serif; /* Police Plein pour h1 */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'Excon', sans-serif; /* Police Excon pour h2 */
+    font-weight: bold;
+}
+h3 {
+    font-size: 2.5rem;
+    font-family: 'Excon', sans-serif; /* Police Excon pour h2 */
+    font-weight: bold;
+}
+p {
+    font-family: 'Plein', sans-serif;
+    font-weight:500;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    color: #692FA0;
+    font-size: 18px;
+    font-family: 'Excon', sans-serif;
+    padding: 5px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.date {
+    font-family: 'Excon', sans-serif;
+    font-size: 2.5rem;
+    color: #692FA0;
+    margin: 20px 5px 0px;
+}
+button{
+    font-family: 'Excon', sans-serif;
+}
+@media screen and (max-width: 768px) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

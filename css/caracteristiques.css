@@ -1,0 +1,47 @@
+.caracteristiques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 50px;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+}
+
+.description {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #692FA0;
+    text-align: center;
+    width: 250px; /* Définit une largeur fixe pour chaque description */
+}
+
+.description p {
+    line-height: 150%;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Media Query pour les petits écrans (par exemple, tablettes et téléphones) */
+@media (max-width: 768px) {
+    .caracteristiques {
+        padding: 30px; /* Réduit l'espace autour des éléments */
+        gap: 30px; /* Réduit l'espace entre les éléments */
+    }
+
+    .description {
+        width: 100%; /* Sur les petits écrans, les descriptions prennent toute la largeur */
+        padding: 15px; /* Réduit le padding pour un meilleur ajustement */
+    }
+}
+
+/* Media Query pour les écrans très petits (par exemple, téléphones en portrait) */
+@media (max-width: 480px) {
+    .caracteristiques {
+        padding: 20px; /* Réduit encore plus l'espace sur les très petits écrans */
+        gap: 15px; /* Réduit l'espace entre les éléments */
+    }
+
+    .description {
+        width: 100%; /* Les descriptions occupent toute la largeur disponible */
+    }
+}

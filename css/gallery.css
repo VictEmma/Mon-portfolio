@@ -1,0 +1,95 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes par défaut */
+    gap: 40px;
+    padding: 60px;
+}
+
+.gallery-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+    overflow: hidden; /* Cache tout débordement */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition pour zoom et ombre */
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); /* Zoom de l'élément complet */
+    box-shadow: 0 4px 20px #692FA0; /* Ombre violette */
+}
+
+.gallery img {
+    width: 100%;
+    cursor: pointer;
+    transition: none; /* Supprime la transition du zoom sur l'image */
+}
+
+.gallery p {
+    max-width: 200px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    height: 60px;
+    overflow: hidden; /* Cache le texte qui dépasse */
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(105, 47, 160, 0.8); /* Couleur de fond semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur les écrans de taille moyenne */
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur les petits écrans */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 colonne sur les très petits écrans (smartphones) */
+        padding: 20px; /* Moins de padding sur les petits écrans */
+    }
+
+    .gallery-item {
+        padding: 10px; /* Plus d'espace autour des éléments */
+    }
+
+    .gallery p {
+        font-size: 12px; /* Taille de texte plus petite sur les petits écrans */
+        max-width: 180px; /* Réduire la largeur maximale du texte */
+    }
+}

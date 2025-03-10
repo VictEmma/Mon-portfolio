@@ -1,0 +1,109 @@
+.competences {
+    overflow: hidden;
+    position: relative;
+    background: #140F0F;
+    padding: 60px 0;
+}
+
+.competences h2 {
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Conteneur pour les listes */
+.scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animation pour la première liste (défilement vers la gauche) */
+.scroll-left {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+    color: white; /* Rend l'intérieur transparent */
+}
+
+.scroll-left:hover {
+    animation-play-state: paused;
+}
+
+/* Animation pour la deuxième liste (défilement vers la droite) */
+.scroll-right {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-right 15s linear infinite;
+    color: transparent; /* Rend l'intérieur transparent */
+    -webkit-text-stroke: 0.5px #fff;
+}
+
+.scroll-right:hover {
+    animation-play-state: paused;
+}
+
+/* Style des éléments de liste */
+.competences ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+}
+
+/* Ajout du séparateur "•" entre les éléments */
+.competences ul li {
+    position: relative;
+}
+
+.competences ul li:not(:last-child)::after {
+    content: " - ";
+    color: #692FA0;
+    -webkit-text-stroke: 0px #fff;
+    margin-left: 40px;
+}
+
+/* Animation vers la gauche */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animation vers la droite */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Responsivité */
+@media screen and (max-width: 768px) {
+    .competences h2 {
+        font-size: 2.5rem;
+    }
+    .competences ul {
+        font-size: 2rem;
+        gap: 20px;
+        height: 40px;
+    }
+    .competences ul li:not(:last-child)::after {
+        margin-left: 20px;
+    }
+    .scroll-right {
+        -webkit-text-stroke: 0.10px #fff;
+    }
+}

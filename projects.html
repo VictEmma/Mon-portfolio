@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo_new.svg">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Ndayishimiye Victor Emmanuel Portfolio - Tous les projets</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html" class="logo">
+                <img src="img/logo_new.svg" alt="Image stylisée"></a></li>
+            <li><a href="projects.html">MES PROJETS</a></li>
+            <li><a class="email" href="mailto:victoremmanuelndayishimiye@gmail.com>">CONTACT</a></li>
+          </ul>
+    </header>
+    <h1>Mes projets</h1>
+    <div class="filters">
+        <button onclick="filterSelection('all')" class="active">Tout</button>
+        <button onclick="filterSelection('dev')">Développement Web</button>
+        <button onclick="filterSelection('creation')">Création Numérique</button>
+    </div>
+    <div class="filters"> 
+        <button onclick="filterSelection('2023')">2023</button>
+        <button onclick="filterSelection('2024')">2024</button>
+        <button onclick="filterSelection('2025')">2025</button>
+    </div>
+    
+    <div class="catalogue">
+        <a href="clip_thz.html" class="item creation 2024">
+            <img src="img/MOTION.jpg" alt="Motion design THZ">
+            <p>Motion Design terahertz</p>
+        </a>
+        <a href="multipattes.html" class="item dev 2025">
+            <img src="img/multipattes.png" alt="Site web Multipattes">
+            <p>Création de Site Wordpress</p>
+        </a>
+        <a href="newmusic.html" class="item creation 2025">
+            <img src="img/nouvelle da.png" alt="Singles musicaux">
+            <p>2 Singles musicaux</p>
+        </a>
+        <a href="infographie.html" class="item dev 2024">
+            <img src="img/la_face_des_dauphins.png" alt="Infographie">
+            <p>Site Infographie sur les dauphins</p>
+        </a>
+        <a href="hazards.html" class="item creation 2024">
+            <img src="img/hazards assemblage.png" alt="Hazards">
+            <p>Des contenus promotionnels mêlant science et jeux vidéos</p>
+        </a>
+        <a href="p9.html" class="item creation 2024">
+            <img src="img/P9 assemblage.png" alt="Cover d'album">
+            <p>Un Album musical en 1 semaine</p>
+        </a>
+        <a href="interview.html" class="item creation 2023">
+            <img src="img/Affiche_interview.jpg" alt="Interview">
+            <p>Interview avec une voyante</p>
+        </a>
+    </div>
+       
+    <footer>
+        <h2>CONTACTEZ MOI</h2>
+        <a class="email" href="mailto:victoremmanuelndayishimiye@gmail.com>">victoremmanuelndayishimiye@gmail.com</a>
+        <div class="others">
+            <a href="https://www.linkedin.com/in/victor-emmanuel-ndayishimiye-1b344b298/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            <a href="https://github.com/VictEmma" target="_blank" rel="noopener noreferrer">GITHUB</a>            
+        </div>
+        <p>&copy; 2025 NDAYISHIMIYE Victor Emmanuel. Tous droits réservés.</p>
+    </footer>
+    <script>
+        function filterSelection(category) {
+            let items = document.querySelectorAll('.item');
+            let buttons = document.querySelectorAll('.filters button');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

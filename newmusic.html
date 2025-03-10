@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f=Plein&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f=Excon&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo_new.svg">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/presentation.css">
+    <link rel="stylesheet" href="css/competences.css">
+    <link rel="stylesheet" href="css/slider-container.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/caracteristiques.css">
+    <link rel="stylesheet" href="css/clip_thz.css">
+    <title>Ndayishimiye Victor Emmanuel Portfolio - Nouvelle DA</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html" class="logo">
+                <img src="img/logo_new.svg" alt="Image stylisée"></a></li>
+            <li><a href="projects.html">MES PROJETS</a></li>
+            <li><a class="email" href="mailto:victoremmanuelndayishimiye@gmail.com>">CONTACT</a></li>
+          </ul>
+    </header>
+    <a href="projects.html" class="button">Retour</a>
+    <h2 class="date">2025</h2>
+    <h1 class="title">Conception et sortie de 2 singles musicaux</h1>
+    <img class="banner" src="img/nouvelle da.png" alt="clip_thz">
+    <h2></h2>
+    <section class="caracteristiques">
+        <div class="description">
+            <h3>Contexte</h3>
+            <p>Je voulais expérimenter une nouvelle direction artistique et explorer de nouveaux styles musicaux.</p>
+        </div>
+        <div class="description">
+            <h3>Objectifs</h3>
+            <p>L’objectif était de proposer une expérience musicale percutante en associant composition, mixage et identité visuelle forte. Ce projet m’a également permis d’approfondir la gestion des réseaux sociaux, la création de contenus et les stratégies de diffusion.</p>
+        </div>
+        <div class="description">
+            <h3>Outils</h3>
+            <p>Bandlab, Capcut, Tiktok, Instagram, Youtube</p>
+        </div>
+        </div>
+        <div class="description">
+            <h3>Livrables</h3>
+            <p>fichiers audios : .WAV, .MP3, vidéos promotionnelles, covers produites par ma directrice artistique.</p>
+        </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="img/funmaistriste2.jpg" alt="Image 1" onclick="openImage(this)">
+            <p>Cover FUN MAIS TRISTE version normale</p>
+        </div>
+        <div class="gallery-item">
+            <img src="img/funmaistriste2_slow_copie.jpg" alt="Image 1" onclick="openImage(this)">
+            <p>Cover FUN MAIS TRISTE version slowed</p>
+        </div>
+        <div class="gallery-item">
+            <img src="img/funmaistriste2_sped.jpg" alt="Image 1" onclick="openImage(this)">
+            <p>Cover FUN MAIS TRISTE version speed up</p>
+        </div>
+        <div class="gallery-item">
+            <img src="img/o_blzck.jpg" alt="Image 1" onclick="openImage(this)">
+            <p>Cover FÊTE SANS MOI version normale</p>
+        </div>
+        <div class="gallery-item">
+            <img src="img/o_white_slowed.jpg" alt="Image 1" onclick="openImage(this)">
+            <p>Cover FÊTE SANS MOI version slowed</p>
+        </div>
+        <div class="gallery-item">
+            <img src="img/o_white_speedup.png" alt="Image 1" onclick="openImage(this)">
+            <p>Cover FÊTE SANS MOI version speed up</p>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="closeImage()">
+        <img id="overlayImage" src="" alt="">
+    </section>
+    <a href="https://open.spotify.com/intl-fr/album/4YcQQ8D67L0DvnKn9tVAbw?si=pDWqwzn6QNG3ezLijQz4XQ" class="projects" target="_blank">FÊTE SANS MOI sur spotify</a>
+    <script>
+        function openImage(img) {
+            document.getElementById('overlayImage').src = img.src;
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closeImage() {
+            document.getElementById('overlay').classList.remove('active');
+        }
+    </script>
+        <footer>
+            <h2>CONTACTEZ MOI</h2>
+            <a class="email" href="mailto:victoremmanuelndayishimiye@gmail.com>">victoremmanuelndayishimiye@gmail.com</a>
+            <div class="others">
+                <a href="https://www.linkedin.com/in/victor-emmanuel-ndayishimiye-1b344b298/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                <a href="https://github.com/VictEmma" target="_blank" rel="noopener noreferrer">GITHUB</a>            
+            </div>
+            <p>&copy; 2025 NDAYISHIMIYE Victor Emmanuel. Tous droits réservés.</p>
+        </footer>
+</body>
+</html>

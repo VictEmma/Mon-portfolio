@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f=Plein&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f=Excon&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo_new.svg">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/presentation.css">
+    <link rel="stylesheet" href="css/competences.css">
+    <link rel="stylesheet" href="css/slider-container.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/caracteristiques.css">
+    <link rel="stylesheet" href="css/clip_thz.css">
+    <title>Ndayishimiye Victor Emmanuel Portfolio - Interview</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html" class="logo">
+                <img src="img/logo_new.svg" alt="Image stylisée"></a></li>
+            <li><a href="projects.html">MES PROJETS</a></li>
+            <li><a class="email" href="mailto:victoremmanuelndayishimiye@gmail.com>">CONTACT</a></li>
+          </ul>
+    </header>
+    <a href="projects.html" class="button">Retour</a>
+    <h2 class="date">2023</h2>
+    <h1 class="title">Dans le monde de Sandrine Josserand</h1>
+    <img class="banner" src="img/Affiche_interview.jpg" alt="clip_thz">
+    <section class="caracteristiques">
+        <div class="description">
+            <h3>Contexte</h3>
+            <p>Nous devions filmer une interview avec une personne à l'activité peu commune.</p>
+        </div>
+        <div class="description">
+            <h3>Objectifs</h3>
+            <p>Notre objectif était de filmer une interview intéressante malgré notre manque d'exprience.</p>
+        </div>
+        <div class="description">
+            <h3>Outils</h3>
+            <p>2 Caméras, 2 kits de lumière, 1 micro cravate.</p>
+        </div>
+        </div>
+        <div class="description">
+            <h3>Livrables</h3>
+            <p>Script, Storyboard, Questions, Logos, vidéo format long 1280x720.</p>
+        </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="img/logo interview.png" alt="Image 1" onclick="openImage(this)">
+            <p>Premier jet du logo de l'interview</p>
+        </div>
+        <div class="gallery-item">
+            <img src="img/Logo_interview_officiel.png" alt="Image 1" onclick="openImage(this)">
+            <p>Deuxième jet de logo</p>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay" onclick="closeImage()">
+        <img id="overlayImage" src="" alt="">
+    </section>
+    <a href="https://youtu.be/CRRoHRz3iRg?si=I2Zm9gbPvvRWHUEj" class="projects" target="_blank">L'interview</a>
+    <script>
+        function openImage(img) {
+            document.getElementById('overlayImage').src = img.src;
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closeImage() {
+            document.getElementById('overlay').classList.remove('active');
+        }
+    </script>
+        <footer>
+            <h2>CONTACTEZ MOI</h2>
+            <a class="email" href="mailto:victoremmanuelndayishimiye@gmail.com>">victoremmanuelndayishimiye@gmail.com</a>
+            <div class="others">
+                <a href="https://www.linkedin.com/in/victor-emmanuel-ndayishimiye-1b344b298/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                <a href="https://github.com/VictEmma" target="_blank" rel="noopener noreferrer">GITHUB</a>            
+            </div>
+            <p>&copy; 2025 NDAYISHIMIYE Victor Emmanuel. Tous droits réservés.</p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* Version Desktop (inchangée) */
+.presentation {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #140F0F 50%, #692FA0 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 80px;
+    position: relative;
+    opacity: 1; /* Toujours visible en desktop */
+    transition: opacity 1s ease-in-out; /* Animation de transition */
+
+}
+.presentation img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    clip-path: polygon(10% 0%, 90% 5%, 100% 90%, 5% 100%, 0% 10%);
+    transition: all 0.5s ease-in-out;
+}
+
+.presentation img:hover {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 85%, 10% 100%, 0% 15%);
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.1) contrast(1.2);
+}
+.presentation .text h2{
+    color:white;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.text p {
+    max-width: 900px;
+}
+.photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.photo a {
+    width: 275px;
+    padding: 10px 20px;
+    background-color: aliceblue;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    transform: rotate(-7deg); /* Rotation de -7° */
+}
+
+.photo a:hover {
+    transform: scale(1.05) rotate(-9deg);
+    filter: brightness(1.1) contrast(1.2);
+}
+
+p {
+    color: white;
+}
+/* Animation des lettres : Apparition avec effet de glissement */
+
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .text h2 p {
+        opacity: 0; /* Texte caché au départ */
+        transform: translateX(-60px) scale(0.9); /* Décalage plus important et zoom réduit pour mobile */
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .text.active h2 p {
+        opacity: 1; /* Texte visible */
+        transform: translateX(0) scale(1); /* Retour à sa position normale avec une échelle 1 */
+    }
+
+
+
+    .presentation {
+        padding: 40px 20px;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .presentation img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .text {
+        gap: 15px;
+        align-items: center;
+    }
+    .text p{
+        max-width: none;
+    }
+
+    .photo a {
+        width: 230px;
+        padding: 12px 25px;
+    }
+
+    /* Animation quand la section est visible */
+    .presentation.active img {
+        clip-path: polygon(5% 0%, 95% 0%, 100% 85%, 10% 100%, 0% 15%);
+        transform: scale(1.05) rotate(2deg);
+        filter: brightness(1.1) contrast(1.2);
+    }
+
+    .presentation.active .photo a {
+        transform: scale(1.05) rotate(-9deg);
+        filter: brightness(1.1) contrast(1.2);
+    }
+    .text h2, .text p {
+        opacity: 0; /* Texte caché au début */
+        transform: translateY(50px); /* Décalage plus important pour le mobile */
+        transition: opacity 0.5s ease, transform 0.7s ease;
+    }
+
+    .text.active h2, .text.active p {
+        opacity: 1; /* Texte qui apparaît */
+        transform: translateY(0); /* Texte qui glisse vers sa position normale */
+    }
+}
+
+
+/* Version très petite taille d'écran (ex: smartphones) */
+@media (max-width: 480px) {
+    .presentation {
+        padding: 30px 60px;
+        gap: 20px;
+    }
+
+    .presentation img {
+        width: 200px; /* Réduit encore plus la taille de l'image */
+        height: 200px;
+    }
+
+    .text {
+        margin-top: 30px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo a {
+        width: 200px; /* Réduit la largeur du bouton */
+        padding: 10px 20px; /* Ajuste les paddings */
+    }
+}
